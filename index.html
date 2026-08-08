@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RE WITH — Investor Demo</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #f7f5f2;
+      color: #172c40;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+        "PingFang TC", sans-serif;
+    }
+
+    .app {
+      max-width: 430px;
+      min-height: 100vh;
+      margin: auto;
+      background: #ffffff;
+    }
+
+    header {
+      padding: 28px 24px 18px;
+      text-align: center;
+    }
+
+    .logo {
+      font-size: 32px;
+      font-weight: 600;
+      letter-spacing: 3px;
+    }
+
+    .subtitle {
+      margin-top: 8px;
+      color: #777;
+      font-size: 13px;
+    }
+
+    .hero {
+      padding: 45px 28px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 34px;
+      line-height: 1.25;
+      margin: 0 0 18px;
+    }
+
+    .hero p {
+      font-size: 17px;
+      line-height: 1.8;
+      color: #555;
+    }
+
+    .button {
+      display: block;
+      width: 100%;
+      padding: 16px;
+      margin-top: 28px;
+      border: 0;
+      border-radius: 30px;
+      background: #172c40;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .section {
+      padding: 28px;
+    }
+
+    .card {
+      background: #f4f1ed;
+      padding: 24px;
+      border-radius: 20px;
+      margin-bottom: 18px;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+
+    .card p {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .number {
+      font-size: 42px;
+      font-weight: 600;
+      margin: 10px 0;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: #999;
+      font-size: 12px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="app">
+
+  <header>
+    <div class="logo">RE WITH</div>
+    <div class="subtitle">You are not alone. We're with you.</div>
+  </header>
+
+  <main id="home">
+
+    <section class="hero">
+      <h1>你不是一個人，<br>我們與你同在。</h1>
+
+      <p>
+        RE WITH 是一個以陪伴與信任為核心的服務平台，
+        讓需要幫助的人，更容易找到合適的陪伴。
+      </p>
+
+      <button class="button" onclick="showPitch()">
+        開始了解 RE WITH
+      </button>
+    </section>
+
+    <section class="section">
+
+      <div class="card">
+        <h2>01｜我們解決什麼？</h2>
+        <p>
+          當一個人需要陪伴時，
+          找到值得信任的人並不容易。
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>02｜我們怎麼做？</h2>
+        <p>
+          透過身份驗證、背景審查與平台機制，
+          建立更值得信任的陪伴服務。
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>03｜商業模式</h2>
+        <p>
+          平台服務費、會員服務與合作方案，
+          建立可持續的商業模式。
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>04｜投資計畫</h2>
+
+        <div class="number">NT$10M</div>
+
+        <p>
+          第一階段募資，用於產品開發、
+          核心團隊與市場驗證。
+        </p>
+      </div>
+
+      <button class="button" onclick="showContact()">
+        投資合作
+      </button>
+
+    </section>
+
+  </main>
+
+  <section id="contact" class="section hidden">
+
+    <div class="card">
+      <h2>RE WITH Investor Demo</h2>
+
+      <p>
+        感謝您了解 RE WITH。
+        目前這是一個投資人展示版本，
+        用於展示未來產品與服務流程。
+      </p>
+
+      <button class="button" onclick="goHome()">
+        返回首頁
+      </button>
+    </div>
+
+  </section>
+
+  <footer>
+    RE WITH © 2026
+  </footer>
+
+</div>
+
+<script>
+  function showPitch() {
+    window.scrollTo({
+      top: 500,
+      behavior: "smooth"
+    });
+  }
+
+  function showContact() {
+    document.getElementById("home").classList.add("hidden");
+    document.getElementById("contact").classList.remove("hidden");
+    window.scrollTo(0, 0);
+  }
+
+  function goHome() {
+    document.getElementById("contact").classList.add("hidden");
+    document.getElementById("home").classList.remove("hidden");
+    window.scrollTo(0, 0);
+  }
+</script>
+
+</body>
+</html>
