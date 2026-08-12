@@ -50,6 +50,13 @@ frame.addEventListener('load',()=>{
     logo.removeAttribute('height');
   }
 
+  /* Replace the incorrect hero image with the specified GitHub asset. */
+  const heroImage=d.querySelector('.hero-photo img');
+  if(heroImage){
+    heroImage.src='(1) 8E397198-8475-4462-A96E-2986FEDD8659.PNG';
+    heroImage.alt='RE WITH 就醫陪伴服務';
+  }
+
   const brand=d.querySelector('.brand');
   if(brand){
     const span=brand.querySelector('span');
