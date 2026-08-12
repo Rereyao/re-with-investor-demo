@@ -19,15 +19,24 @@ frame.addEventListener('load',()=>{
   const style=d.createElement('style');
   style.textContent=`
     .nav{background:#fff!important}
-    .brand{gap:14px!important}
-    .brand img{width:54px!important;height:54px!important;object-fit:contain!important}
-    .brand span{font-size:24px!important;letter-spacing:.8px!important;font-weight:800!important}
-    @media(max-width:900px){.nav{background:#fff!important}.brand img{width:50px!important;height:50px!important}.brand span{font-size:21px!important}}
+    .brand{gap:0!important;display:flex!important;align-items:center!important;height:72px!important}
+    .brand img{width:auto!important;height:64px!important;max-width:220px!important;object-fit:contain!important;display:block!important;flex:0 0 auto!important}
+    .brand span{display:none!important}
+    @media(max-width:900px){
+      .nav{background:#fff!important}
+      .brand{height:64px!important}
+      .brand img{height:56px!important;max-width:190px!important}
+    }
   `;
   d.head.appendChild(style);
 
   const logo=d.querySelector('.brand img');
-  if(logo){logo.src='愛心logo透明底）.png';logo.alt='RE WITH';logo.removeAttribute('width');logo.removeAttribute('height');}
+  if(logo){
+    logo.src='header-logo-final.png.png';
+    logo.alt='RE WITH';
+    logo.removeAttribute('width');
+    logo.removeAttribute('height');
+  }
 
   const hero=d.querySelector('.hero-photo img');
   if(hero){hero.src='(1) 8E397198-8475-4462-A96E-2986FEDD8659.PNG?v=2';hero.alt='RE WITH 就醫陪伴';}
