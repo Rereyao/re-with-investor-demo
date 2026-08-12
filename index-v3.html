@@ -17,33 +17,32 @@ frame.addEventListener('load',()=>{
   const d=frame.contentDocument;
   if(!d) return;
 
-  /* Exact Header layout copied from index-v4.html */
   const style=d.createElement('style');
   style.textContent=`
     .nav{height:72px!important;position:sticky!important;top:0!important;z-index:20!important;display:flex!important;align-items:center!important;justify-content:space-between!important;padding:0 42px!important;background:#fffdfa!important;border-bottom:1px solid #e7ddd5!important}
-    .brand{display:flex!important;align-items:center!important;text-decoration:none!important;height:48px!important;flex:none!important}
-    .brand img{width:154px!important;height:48px!important;object-fit:contain!important;object-position:left center!important;display:block!important}
+    .brand{display:flex!important;align-items:center!important;text-decoration:none!important;height:48px!important;width:154px!important;overflow:hidden!important;flex:none!important}
+    .brand img{width:154px!important;height:48px!important;object-fit:cover!important;object-position:center center!important;display:block!important;flex:none!important}
     .navlinks{display:flex!important;gap:25px!important;align-items:center!important}
     .navlinks a{font-size:13px!important;color:#183049!important;text-decoration:none!important;white-space:nowrap!important}
     .navlinks .cta{background:#e59a96!important;color:#fff!important;padding:11px 18px!important;border-radius:999px!important}
     @media(max-width:900px){
       .nav{height:72px!important;padding:0 18px!important}
-      .brand{height:48px!important}
-      .brand img{width:136px!important;height:44px!important}
+      .brand{width:136px!important;height:44px!important}
+      .brand img{width:136px!important;height:44px!important;object-fit:cover!important}
       .navlinks{overflow-x:auto!important;flex:1!important;gap:18px!important;justify-content:flex-start!important;scrollbar-width:none!important}
       .navlinks::-webkit-scrollbar{display:none!important}
       .navlinks a{font-size:12px!important}
     }
     @media(max-width:520px){
       .nav{padding:0 14px!important}
-      .brand img{width:128px!important;height:44px!important}
+      .brand{width:128px!important;height:44px!important}
+      .brand img{width:128px!important;height:44px!important;object-fit:cover!important}
       .navlinks{gap:16px!important}
       .navlinks a{font-size:11px!important}
     }
   `;
   d.head.appendChild(style);
 
-  /* Final confirmed white-background Header Logo */
   const logo=d.querySelector('.brand img');
   if(logo){
     logo.src='https://raw.githubusercontent.com/Rereyao/re-with-investor-demo/main/header-logo-final.png.png';
