@@ -1,4 +1,37 @@
 <!doctype html>
 <html lang="zh-Hant">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#fffdfa"><title>RE WITH｜Medical Companion</title><style>html,body{margin:0;width:100%;height:100%;background:#fffdfa}iframe{display:block;width:100%;height:100%;border:0}</style></head>
-<body><iframe src="index-v3-original.html" title="RE WITH Medical Companion"></iframe></body></html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#fffdfa">
+<title>RE WITH｜Medical Companion</title>
+<style>
+html,body{margin:0;width:100%;height:100%;background:#fffdfa}iframe{display:block;width:100%;height:100%;border:0}
+</style>
+</head>
+<body>
+<iframe id="v3" src="index-v3-original.html" title="RE WITH Medical Companion"></iframe>
+<script>
+const frame=document.getElementById('v3');
+frame.addEventListener('load',()=>{
+  const d=frame.contentDocument;
+  if(!d) return;
+  const style=d.createElement('style');
+  style.textContent=`
+    .nav{background:#fffdfa!important}
+    .brand{gap:14px!important}
+    .brand img{width:54px!important;height:54px!important;object-fit:contain!important}
+    .brand span{font-size:24px!important;letter-spacing:.8px!important;font-weight:800!important}
+    @media(max-width:900px){.nav{background:#fffdfa!important}.brand img{width:50px!important;height:50px!important}.brand span{font-size:21px!important}}
+  `;
+  d.head.appendChild(style);
+
+  const logo=d.querySelector('.brand img');
+  if(logo){logo.src='(0) RE_WITH_logo_corrected.png';logo.removeAttribute('width');logo.removeAttribute('height');}
+
+  const hero=d.querySelector('.hero-photo img');
+  if(hero){hero.src='(1) 8E397198-8475-4462-A96E-2986FEDD8659.PNG?v=2';hero.alt='RE WITH 就醫陪伴';}
+});
+</script>
+</body>
+</html>
