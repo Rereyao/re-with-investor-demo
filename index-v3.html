@@ -9,7 +9,7 @@
 html,body{margin:0;width:100%;height:100%;background:#fff}iframe{display:block;width:100%;height:100%;border:0}
 </style>
 </head>
-<body><iframe id="v3" src="index-v3-original.html?v=20260813-08-final-1" title="RE WITH Medical Companion"></iframe>
+<body><iframe id="v3" src="index-v3-original.html?v=20260813-08-final-2" title="RE WITH Medical Companion"></iframe>
 <script>
 const frame=document.getElementById('v3');
 frame.addEventListener('load',()=>{
@@ -34,23 +34,25 @@ frame.addEventListener('load',()=>{
     .list{border-top:1px solid rgba(255,255,255,.2)}
     .list div{display:flex;justify-content:space-between;gap:24px;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.2);font-size:13px}
     .list span{color:#b8c7ce;text-align:right}
-    .invest-ask{margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,.2);font-size:14px;line-height:1.8;color:#fff}
-    .invest-ask strong{color:#fff}
     .investment-sub{font-size:14px;line-height:1.9;color:#dce4e8;margin:0 0 22px}
+    .investment-goal{margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,.2)}
+    .investment-goal-label{font-size:11px;letter-spacing:1.5px;color:#e7a09d;font-weight:800;margin-bottom:8px}
+    .investment-goal-main{font-size:20px;line-height:1.6;color:#fff;font-weight:800}
+    .investment-impact{font-size:12px;line-height:1.8;color:#dce4e8;margin-top:10px}
     @media(max-width:900px){.nav{height:72px;padding:0 18px}.brand img{width:136px;height:44px}.navlinks{overflow-x:auto;flex:1;gap:18px;justify-content:flex-start;scrollbar-width:none}.navlinks::-webkit-scrollbar{display:none}.navlinks a{font-size:12px}.founder-copy{font-size:14px}.invest-grid{grid-template-columns:1fr;gap:35px}}
     @media(max-width:520px){.nav{padding:0 14px}.brand img{width:128px}.navlinks{gap:16px}.navlinks a{font-size:11px}.list div{font-size:12px}}
   `;
   d.head.appendChild(style);
   const logo=d.querySelector('.brand img');
-  if(logo){logo.src='(0) RE_WITH_logo_corrected.png?v=08final1';logo.alt='RE WITH';logo.removeAttribute('width');logo.removeAttribute('height')}
+  if(logo){logo.src='(0) RE_WITH_logo_corrected.png?v=08final2';logo.alt='RE WITH';logo.removeAttribute('width');logo.removeAttribute('height')}
   const heroImage=d.querySelector('.hero-photo img');
-  if(heroImage){heroImage.src='(1) 8E397198-8475-4462-A96E-2986FEDD8659.PNG?v=08final1';heroImage.alt='RE WITH 就醫陪伴服務'}
+  if(heroImage){heroImage.src='(1) 8E397198-8475-4462-A96E-2986FEDD8659.PNG?v=08final2';heroImage.alt='RE WITH 就醫陪伴服務'}
   const storyImage=d.querySelector('.story-photo img');
-  if(storyImage){storyImage.src='一人看診.png?v=08final1';storyImage.alt='一人就醫陪診'}
+  if(storyImage){storyImage.src='一人看診.png?v=08final2';storyImage.alt='一人就醫陪診'}
   const appImage=d.querySelector('.app img');
-  if(appImage){appImage.src='app介面模擬.jpg?v=08final1';appImage.alt='RE WITH App 介面模擬'}
+  if(appImage){appImage.src='app介面模擬.jpg?v=08final2';appImage.alt='RE WITH App 介面模擬'}
   const familyImage=d.querySelector('.family-photo img');
-  if(familyImage){familyImage.src='海外預約.jpg?v=08final1';familyImage.alt='海外子女與台灣父母'}
+  if(familyImage){familyImage.src='海外預約.jpg?v=08final2';familyImage.alt='海外子女與台灣父母'}
 
   const business=d.querySelector('#business');
   if(business){
@@ -85,18 +87,21 @@ frame.addEventListener('load',()=>{
       <div class="invest-grid">
         <div>
           <div class="ey" style="color:#e7a09d">08 · 投資合作</div>
-          <h2>一起建立台灣的醫療陪伴服務。</h2>
-          <p class="investment-sub">RE WITH 已經從一個真實需求出發，建立陪診服務的雛形。</p>
-          <p class="investment-sub">下一階段，我們要把它做成一套<strong>可以被信任、可以被使用，也可以持續擴張的服務系統。</strong></p>
-          <div class="invest-ask"><strong>我們正在尋找認同這個需求，並願意一起建立醫療陪伴服務基礎的合作夥伴。</strong></div>
+          <h2>一起建立就醫陪伴服務平台。</h2>
+          <div class="investment-goal">
+            <div class="investment-goal-label">投資目的</div>
+            <div class="investment-goal-main">讓「沒有人陪我看醫生」，不再是一個人的問題。</div>
+            <div class="investment-impact">就醫陪伴｜減輕家人壓力｜創造新工作機會</div>
+          </div>
         </div>
         <div>
+          <div class="investment-goal-label" style="margin-bottom:14px">下一階段，我們要完成五件事</div>
           <div class="list">
-            <div><b>01｜平台與產品</b><span>完成第一版平台、服務媒合與付款流程</span></div>
-            <div><b>02｜陪診員網絡</b><span>建立招募、訓練、認證與評價制度</span></div>
-            <div><b>03｜安全與信任</b><span>完善身分驗證、背景查核與服務紀錄</span></div>
-            <div><b>04｜市場拓展</b><span>從台北開始，逐步建立城市服務網絡</span></div>
-            <div><b>05｜醫療與企業合作</b><span>拓展醫療院所、企業與家庭服務合作</span></div>
+            <div><b>01｜平台與產品</b><span>建立預約、媒合、付款與服務紀錄</span></div>
+            <div><b>02｜陪診員體系</b><span>招募、職前訓練、認證與服務標準</span></div>
+            <div><b>03｜安全與保障</b><span>身分驗證、背景查核、法律規範與服務保障</span></div>
+            <div><b>04｜市場驗證</b><span>從台北開始，驗證使用需求、服務流程與商業模式</span></div>
+            <div><b>05｜合作拓展</b><span>建立醫療院所、企業與相關服務合作</span></div>
           </div>
         </div>
       </div>
