@@ -15,8 +15,6 @@ const frame=document.getElementById('v3');
 frame.addEventListener('load',()=>{
   const d=frame.contentDocument;
   if(!d) return;
-
-  /* Header styling copied from index-v4.html */
   const style=d.createElement('style');
   style.textContent=`
     .nav{height:72px;position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:0 42px;background:#fffdfa;border-bottom:1px solid #e7ddd5}
@@ -26,41 +24,23 @@ frame.addEventListener('load',()=>{
     .navlinks{display:flex;gap:25px;align-items:center}
     .navlinks a{font-size:13px;color:#183049;text-decoration:none;white-space:nowrap}
     .navlinks .cta{background:#e59a96;color:#fff;padding:11px 18px;border-radius:999px}
-    @media(max-width:900px){
-      .nav{height:72px;padding:0 18px}
-      .brand img{width:136px;height:44px}
-      .navlinks{overflow-x:auto;flex:1;gap:18px;justify-content:flex-start;scrollbar-width:none}
-      .navlinks::-webkit-scrollbar{display:none}
-      .navlinks a{font-size:12px}
-    }
-    @media(max-width:520px){
-      .nav{padding:0 14px}
-      .brand img{width:128px}
-      .navlinks{gap:16px}
-      .navlinks a{font-size:11px}
-    }
+    .needs .need.pet{grid-column:1/-1}
+    @media(max-width:900px){.nav{height:72px;padding:0 18px}.brand img{width:136px;height:44px}.navlinks{overflow-x:auto;flex:1;gap:18px;justify-content:flex-start;scrollbar-width:none}.navlinks::-webkit-scrollbar{display:none}.navlinks a{font-size:12px}.needs .need.pet{grid-column:auto}}
+    @media(max-width:520px){.nav{padding:0 14px}.brand img{width:128px}.navlinks{gap:16px}.navlinks a{font-size:11px}}
   `;
   d.head.appendChild(style);
-
   const logo=d.querySelector('.brand img');
-  if(logo){
-    logo.src='(0) RE_WITH_logo_corrected.png';
-    logo.alt='RE WITH';
-    logo.removeAttribute('width');
-    logo.removeAttribute('height');
-  }
-
-  /* Replace the incorrect hero image with the specified GitHub asset. */
+  if(logo){logo.src='(0) RE_WITH_logo_corrected.png';logo.alt='RE WITH';logo.removeAttribute('width');logo.removeAttribute('height')}
   const heroImage=d.querySelector('.hero-photo img');
-  if(heroImage){
-    heroImage.src='(1) 8E397198-8475-4462-A96E-2986FEDD8659.PNG';
-    heroImage.alt='RE WITH 就醫陪伴服務';
-  }
-
+  if(heroImage){heroImage.src='(1) 8E397198-8475-4462-A96E-2986FEDD8659.PNG';heroImage.alt='RE WITH 就醫陪伴服務'}
   const brand=d.querySelector('.brand');
-  if(brand){
-    const span=brand.querySelector('span');
-    if(span) span.remove();
+  if(brand){const span=brand.querySelector('span');if(span) span.remove()}
+  const needs=d.querySelector('.needs');
+  if(needs && !needs.querySelector('.pet')){
+    const pet=d.createElement('div');
+    pet.className='need pet';
+    pet.innerHTML='<b>寵物陪診</b><span>飼主無法到場時，協助陪同寵物就醫、候診與完成返家流程。</span>';
+    needs.appendChild(pet);
   }
 });
 </script>
