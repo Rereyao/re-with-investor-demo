@@ -1,116 +1,20 @@
 <!doctype html>
 <html lang="zh-Hant">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#f8f3ee">
-<title>RE WITH｜Medical Companion</title>
-<style>
-html,body{margin:0;width:100%;height:100%;background:#fff}iframe{display:block;width:100%;height:100%;border:0}
-</style>
-</head>
-<body><iframe id="v3" src="index-v3-original.html?v=20260813-08-final-2" title="RE WITH Medical Companion"></iframe>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f8f3ee"><title>RE WITH｜Medical Companion</title><style>html,body{margin:0;width:100%;height:100%;background:#fff}iframe{display:block;width:100%;height:100%;border:0}</style></head>
+<body><iframe id="v3" src="index-v3-original.html?v=20260813-08-final-3" title="RE WITH Medical Companion"></iframe>
 <script>
 const frame=document.getElementById('v3');
-frame.addEventListener('load',()=>{
-  const d=frame.contentDocument;
-  if(!d) return;
-  const style=d.createElement('style');
-  style.textContent=`
-    .nav{height:72px;position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:0 42px;background:#fffdfa;border-bottom:1px solid #e7ddd5}
-    .brand{display:flex;align-items:center;text-decoration:none;height:48px;flex:none}
-    .brand img{width:154px;height:48px;object-fit:contain;object-position:left center;display:block}
-    .brand span{display:none}
-    .navlinks{display:flex;gap:25px;align-items:center}
-    .navlinks a{font-size:13px;color:#183049;text-decoration:none;white-space:nowrap}
-    .navlinks .cta{background:#e59a96;color:#fff;padding:11px 18px;border-radius:999px}
-    .founder-copy{font-size:15px;line-height:1.9;color:#747b79}
-    .founder-copy p{margin:0 0 14px}
-    .founder-copy strong{color:#183049}
-    .invest{background:#183049;color:#fff}
-    .invest h2{color:#fff}
-    .invest-grid{display:grid;grid-template-columns:1fr 1fr;gap:65px}
-    .invest p{color:#dce4e8;line-height:1.9;font-size:14px}
-    .list{border-top:1px solid rgba(255,255,255,.2)}
-    .list div{display:flex;justify-content:space-between;gap:24px;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.2);font-size:13px}
-    .list span{color:#b8c7ce;text-align:right}
-    .investment-sub{font-size:14px;line-height:1.9;color:#dce4e8;margin:0 0 22px}
-    .investment-goal{margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,.2)}
-    .investment-goal-label{font-size:11px;letter-spacing:1.5px;color:#e7a09d;font-weight:800;margin-bottom:8px}
-    .investment-goal-main{font-size:20px;line-height:1.6;color:#fff;font-weight:800}
-    .investment-impact{font-size:12px;line-height:1.8;color:#dce4e8;margin-top:10px}
-    @media(max-width:900px){.nav{height:72px;padding:0 18px}.brand img{width:136px;height:44px}.navlinks{overflow-x:auto;flex:1;gap:18px;justify-content:flex-start;scrollbar-width:none}.navlinks::-webkit-scrollbar{display:none}.navlinks a{font-size:12px}.founder-copy{font-size:14px}.invest-grid{grid-template-columns:1fr;gap:35px}}
-    @media(max-width:520px){.nav{padding:0 14px}.brand img{width:128px}.navlinks{gap:16px}.navlinks a{font-size:11px}.list div{font-size:12px}}
-  `;
-  d.head.appendChild(style);
-  const logo=d.querySelector('.brand img');
-  if(logo){logo.src='(0) RE_WITH_logo_corrected.png?v=08final2';logo.alt='RE WITH';logo.removeAttribute('width');logo.removeAttribute('height')}
-  const heroImage=d.querySelector('.hero-photo img');
-  if(heroImage){heroImage.src='(1) 8E397198-8475-4462-A96E-2986FEDD8659.PNG?v=08final2';heroImage.alt='RE WITH 就醫陪伴服務'}
-  const storyImage=d.querySelector('.story-photo img');
-  if(storyImage){storyImage.src='一人看診.png?v=08final2';storyImage.alt='一人就醫陪診'}
-  const appImage=d.querySelector('.app img');
-  if(appImage){appImage.src='app介面模擬.jpg?v=08final2';appImage.alt='RE WITH App 介面模擬'}
-  const familyImage=d.querySelector('.family-photo img');
-  if(familyImage){familyImage.src='海外預約.jpg?v=08final2';familyImage.alt='海外子女與台灣父母'}
-
-  const business=d.querySelector('#business');
-  if(business){
-    [...business.querySelectorAll('*')].forEach(el=>{
-      const text=el.textContent.trim();
-      if((text==='典型需求場景' || text==='陪診需求存在於不同人生階段與家庭情境。') && el.children.length===0) el.remove();
-    });
-  }
-
-  const founder=d.querySelector('.founder');
-  if(founder){
-    founder.innerHTML=`
-      <div>
-        <div class="ey">07 · 為什麼是 RE WITH</div>
-        <div class="founder-statement">「我曾經就是那個獨自走進診間的人。」</div>
-      </div>
-      <div class="founder-copy">
-        <p>在過去的醫療旅程中，我經歷過無數次一個人面對醫師、診療與手術的時刻。</p>
-        <p>當我和朋友分享自己的經歷時，才發現這在這一代人中其實很常見——甚至連產檢、生產，都可能是一個人面對。</p>
-        <p>這讓我深刻體會到：當代人的生活、家庭結構與親密關係早已改變。很多人因為忙碌或無人陪伴，而延後就醫，甚至把小病拖成大病。</p>
-        <p>而我，因為預防醫療走進醫院。我比較勇敢嗎？還是我比較幸運，有朋友陪伴？</p>
-        <p>如果有專業的陪同團隊，提供陪伴患者就醫的服務，讓人們在需要時有人可以陪、協助紀錄醫囑、給予情緒支持，也許就能讓更多人願意面對治療，更願意做好預防醫療。</p>
-        <p><strong>RE WITH，就是為了提供一個可信任的陪伴者，陪伴每一位需要就醫的人。</strong></p>
-        <p><strong>姚妍萱 | Founder of Re-Re</strong></p>
-      </div>
-    `;
-  }
-
-  const investment=d.querySelector('#investment');
-  if(investment){
-    investment.innerHTML=`
-      <div class="invest-grid">
-        <div>
-          <div class="ey" style="color:#e7a09d">08 · 投資合作</div>
-          <h2>一起建立就醫陪伴服務平台。</h2>
-          <div class="investment-goal">
-            <div class="investment-goal-label">投資目的</div>
-            <div class="investment-goal-main">讓「沒有人陪我看醫生」，不再是一個人的問題。</div>
-            <div class="investment-impact">就醫陪伴｜減輕家人壓力｜創造新工作機會</div>
-          </div>
-        </div>
-        <div>
-          <div class="investment-goal-label" style="margin-bottom:14px">下一階段，我們要完成五件事</div>
-          <div class="list">
-            <div><b>01｜平台與產品</b><span>建立預約、媒合、付款與服務紀錄</span></div>
-            <div><b>02｜陪診員體系</b><span>招募、職前訓練、認證與服務標準</span></div>
-            <div><b>03｜安全與保障</b><span>身分驗證、背景查核、法律規範與服務保障</span></div>
-            <div><b>04｜市場驗證</b><span>從台北開始，驗證使用需求、服務流程與商業模式</span></div>
-            <div><b>05｜合作拓展</b><span>建立醫療院所、企業與相關服務合作</span></div>
-          </div>
-        </div>
-      </div>
-    `;
-  }
-
-  const brand=d.querySelector('.brand');
-  if(brand){const span=brand.querySelector('span');if(span) span.remove()}
+frame.addEventListener('load',()=>{const d=frame.contentDocument;if(!d)return;
+const style=d.createElement('style');style.textContent=`.nav{height:72px;position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:0 42px;background:#fffdfa;border-bottom:1px solid #e7ddd5}.brand{display:flex;align-items:center;text-decoration:none;height:48px;flex:none}.brand img{width:154px;height:48px;object-fit:contain;object-position:left center;display:block}.brand span{display:none}.navlinks{display:flex;gap:25px;align-items:center}.navlinks a{font-size:13px;color:#183049;text-decoration:none;white-space:nowrap}.navlinks .cta{background:#e59a96;color:#fff;padding:11px 18px;border-radius:999px}.founder-copy{font-size:15px;line-height:1.9;color:#747b79}.founder-copy p{margin:0 0 14px}.founder-copy strong{color:#183049}.invest{background:#183049;color:#fff}.invest h2{color:#fff}.invest-grid{display:grid;grid-template-columns:1fr 1fr;gap:65px}.list{border-top:1px solid rgba(255,255,255,.2)}.list div{display:flex;justify-content:space-between;gap:24px;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.2);font-size:13px}.list span{color:#b8c7ce;text-align:right}.investment-goal{margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,.2)}.investment-goal-label{font-size:11px;letter-spacing:1.5px;color:#e7a09d;font-weight:800;margin-bottom:8px}.investment-goal-main{font-size:20px;line-height:1.6;color:#fff;font-weight:800}.investment-impact{font-size:12px;line-height:1.8;color:#dce4e8;margin-top:10px}@media(max-width:900px){.nav{height:72px;padding:0 18px}.brand img{width:136px;height:44px}.navlinks{overflow-x:auto;flex:1;gap:18px;justify-content:flex-start;scrollbar-width:none}.navlinks::-webkit-scrollbar{display:none}.navlinks a{font-size:12px}.founder-copy{font-size:14px}.invest-grid{grid-template-columns:1fr;gap:35px}}@media(max-width:520px){.nav{padding:0 14px}.brand img{width:128px}.navlinks{gap:16px}.navlinks a{font-size:11px}.list div{font-size:12px}}`;d.head.appendChild(style);
+const logo=d.querySelector('.brand img');if(logo){logo.src='(0) RE_WITH_logo_corrected.png?v=08final3';logo.alt='RE WITH';logo.removeAttribute('width');logo.removeAttribute('height')}
+const heroImage=d.querySelector('.hero-photo img');if(heroImage){heroImage.src='(1) 8E397198-8475-4462-A96E-2986FEDD8659.PNG?v=08final3';heroImage.alt='RE WITH 就醫陪伴服務'}
+const storyImage=d.querySelector('.story-photo img');if(storyImage){storyImage.src='一人看診.png?v=08final3';storyImage.alt='一人就醫陪診'}
+const appImage=d.querySelector('.app img');if(appImage){appImage.src='app介面模擬.jpg?v=08final3';appImage.alt='RE WITH App 介面模擬'}
+const familyImage=d.querySelector('.family-photo img');if(familyImage){familyImage.src='海外預約.jpg?v=08final3';familyImage.alt='海外子女與台灣父母'}
+const business=d.querySelector('#business');if(business){[...business.querySelectorAll('*')].forEach(el=>{const text=el.textContent.trim();if((text==='典型需求場景'||text==='陪診需求存在於不同人生階段與家庭情境。')&&el.children.length===0)el.remove()})}
+const founder=d.querySelector('.founder');if(founder){founder.innerHTML=`<div><div class="ey">07 · 為什麼是 RE WITH</div><div class="founder-statement">「我曾經就是那個獨自走進診間的人。」</div></div><div class="founder-copy"><p>在過去的醫療旅程中，我經歷過無數次一個人面對醫師、診療與手術的時刻。</p><p>當我和朋友分享自己的經歷時，才發現這在這一代人中其實很常見——甚至連產檢、生產，都可能是一個人面對。</p><p>這讓我深刻體會到：當代人的生活、家庭結構與親密關係早已改變。很多人因為忙碌或無人陪伴，而延後就醫，甚至把小病拖成大病。</p><p>而我，因為預防醫療走進醫院。我比較勇敢嗎？還是我比較幸運，有朋友陪伴？</p><p>如果有專業的陪同團隊，提供陪伴患者就醫的服務，讓人們在需要時有人可以陪、協助紀錄醫囑、給予情緒支持，也許就能讓更多人願意面對治療，更願意做好預防醫療。</p><p><strong>RE WITH，就是為了提供一個可信任的陪伴者，陪伴每一位需要就醫的人。</strong></p><p><strong>姚妍萱 | Founder of Re-Re</strong></p></div>`}
+const investment=d.querySelector('#investment');if(investment){investment.innerHTML=`<div class="invest-grid"><div><div class="ey" style="color:#e7a09d">08 · 投資合作</div><h2>一起建立就醫陪伴服務平台。</h2><div class="investment-goal"><div class="investment-goal-label">投資目的</div><div class="investment-goal-main">讓「沒有人陪我看醫生」，不再是一個人的問題。</div><div class="investment-impact">就醫陪伴｜減輕家人壓力｜創造新工作機會</div></div></div><div><div class="investment-goal-label" style="margin-bottom:14px">下一階段，我們要完成五件事</div><div class="list"><div><b>01｜平台與產品</b><span>建立預約、媒合、付款與服務紀錄</span></div><div><b>02｜陪診員體系</b><span>招募、職前訓練、認證與服務標準</span></div><div><b>03｜安全與保障</b><span>身分驗證、背景查核、法律規範與服務保障</span></div><div><b>04｜市場驗證</b><span>從台北開始，驗證使用需求、服務流程與商業模式</span></div><div><b>05｜合作拓展</b><span>建立醫療院所、企業與相關服務合作</span></div></div></div></div>`}
+const closingLine=[...d.querySelectorAll('*')].find(el=>el.children.length===0&&el.textContent.trim()==='當家人無法到場，委託一個值得信任的人，陪你完成一次就醫。');if(closingLine)closingLine.remove();
+const brand=d.querySelector('.brand');if(brand){const span=brand.querySelector('span');if(span)span.remove()}
 });
-</script>
-</body>
-</html>
+</script></body></html>
