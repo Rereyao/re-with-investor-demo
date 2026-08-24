@@ -9,12 +9,13 @@
 html,body{margin:0;width:100%;height:100%;background:#fff}iframe{display:block;width:100%;height:100%;border:0}
 </style>
 </head>
-<body><iframe id="v3" src="index-v3-original.html?v=20260813-06-final-5" title="RE WITH Medical Companion"></iframe>
+<body><iframe id="v3" src="index-v3-original.html?v=20260825-08-10" title="RE WITH Medical Companion"></iframe>
 <script>
 const frame=document.getElementById('v3');
 frame.addEventListener('load',()=>{
   const d=frame.contentDocument;
   if(!d) return;
+
   const style=d.createElement('style');
   style.textContent=`
     .nav{height:72px;position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:0 42px;background:#fffdfa;border-bottom:1px solid #e7ddd5}
@@ -24,10 +25,81 @@ frame.addEventListener('load',()=>{
     .navlinks{display:flex;gap:25px;align-items:center}
     .navlinks a{font-size:13px;color:#183049;text-decoration:none;white-space:nowrap}
     .navlinks .cta{background:#e59a96;color:#fff;padding:11px 18px;border-radius:999px}
-    @media(max-width:900px){.nav{height:72px;padding:0 18px}.brand img{width:136px;height:44px}.navlinks{overflow-x:auto;flex:1;gap:18px;justify-content:flex-start;scrollbar-width:none}.navlinks::-webkit-scrollbar{display:none}.navlinks a{font-size:12px}}
-    @media(max-width:520px){.nav{padding:0 14px}.brand img{width:128px}.navlinks{gap:16px}.navlinks a{font-size:11px}}
+
+    /* 08–10 ONLY: investor extension. 00–07 remain untouched. */
+    #business08,#growth09,#finance10{--rw-paper:#fffdfa;--rw-cream:#f8f3ee;--rw-green:#55715f;--rw-navy:#183049;--rw-muted:#747b79;--rw-line:#e7ddd5;--rw-pink:#e59a96;position:relative;background:var(--rw-paper);color:var(--rw-navy);font-family:inherit}
+    .rw-investor-section{padding:76px clamp(26px,6vw,88px);border-top:1px solid var(--rw-line)}
+    .rw-kicker{font-size:10px;letter-spacing:2.4px;font-weight:800;color:var(--rw-green);margin-bottom:9px}
+    .rw-title{font-size:38px;line-height:1.22;letter-spacing:-1px;margin:0 0 9px;font-weight:800}
+    .rw-sub{font-size:15px;color:var(--rw-muted);margin:0 0 34px;line-height:1.7}
+    .rw-year{font-size:11px;letter-spacing:1.5px;color:var(--rw-muted)}
+    .rw-big{font-size:44px;line-height:1;font-weight:850;letter-spacing:-1.5px;color:var(--rw-navy)}
+    .rw-green{color:var(--rw-green)}
+    .rw-small{font-size:11px;color:var(--rw-muted);line-height:1.6}
+    .rw-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .rw-tier{padding:26px 24px;border:1px solid var(--rw-line);border-radius:20px;background:#fff}
+    .rw-tier:nth-child(1){background:#eef4ee}.rw-tier:nth-child(2){background:#f8f3ee}.rw-tier:nth-child(3){background:#e9edf1}
+    .rw-tier-label{font-size:10px;letter-spacing:2px;font-weight:800;color:var(--rw-green)}
+    .rw-tier-price{font-size:30px;font-weight:850;margin-top:13px;letter-spacing:-.5px;color:var(--rw-navy)}
+    .rw-tier-mix{font-size:13px;color:var(--rw-muted);margin-top:7px}
+    .rw-unit-flow{display:grid;grid-template-columns:1fr 1.15fr 1fr;align-items:center;gap:18px;margin-top:22px}
+    .rw-flow-box{padding:25px;border-top:1px solid var(--rw-navy);border-bottom:1px solid var(--rw-line)}
+    .rw-flow-main{font-size:28px;font-weight:850;color:var(--rw-navy)}
+    .rw-flow-arrow{text-align:center;font-size:22px;color:var(--rw-green)}
+    .rw-note{margin-top:22px;font-size:11px;color:var(--rw-muted);border-top:1px solid var(--rw-line);padding-top:14px}
+    .rw-aov{margin-top:34px;padding-top:28px;border-top:1px solid var(--rw-line)}
+    .rw-aov-row{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:15px}
+    .rw-aov-item{padding:14px 10px;border-bottom:2px solid #55715f;background:#f8f3ee}
+    .rw-aov-item strong{display:block;font-size:18px;color:var(--rw-navy)}
+
+    .rw-growth-top{display:grid;grid-template-columns:.9fr 1.1fr;gap:50px;align-items:end}
+    .rw-growth-number{font-size:58px;line-height:1;font-weight:850;letter-spacing:-2px;color:var(--rw-navy);margin-top:18px}
+    .rw-chart{margin-top:30px;padding-top:25px;border-top:1px solid var(--rw-line)}
+    .rw-chart-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:20px}
+    .rw-linechart{position:relative;height:220px;padding:18px 0 34px}
+    .rw-linechart svg{width:100%;height:100%;overflow:visible}
+    .rw-chart-labels{display:grid;grid-template-columns:repeat(5,1fr);font-size:10px;color:var(--rw-muted);margin-top:3px}
+    .rw-chart-labels span{text-align:center}
+    .rw-metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
+    .rw-metric{padding:22px 20px;border:1px solid var(--rw-line);border-radius:18px;background:#fff}
+    .rw-metric-title{font-size:12px;font-weight:800;color:var(--rw-green);letter-spacing:.8px}
+    .rw-metric-main{font-size:30px;font-weight:850;color:var(--rw-navy);margin:8px 0}
+    .rw-mini-row{display:grid;grid-template-columns:repeat(5,1fr);gap:5px;margin-top:12px}
+    .rw-mini-row div{font-size:10px;color:var(--rw-muted);text-align:center}
+    .rw-mini-row b{display:block;font-size:12px;color:var(--rw-navy);margin-bottom:3px}
+    .rw-gtm{margin-top:26px;padding-top:24px;border-top:1px solid var(--rw-line)}
+    .rw-gtm-bars{display:grid;grid-template-columns:35fr 25fr 25fr 15fr;height:15px;margin-top:13px;border-radius:99px;overflow:hidden;background:#eee}
+    .rw-gtm-bars i{display:block}.rw-gtm-bars i:nth-child(1){background:var(--rw-navy)}.rw-gtm-bars i:nth-child(2){background:var(--rw-green)}.rw-gtm-bars i:nth-child(3){background:#8fa89a}.rw-gtm-bars i:nth-child(4){background:#c8d1d5}
+    .rw-gtm-labels{display:grid;grid-template-columns:35fr 25fr 25fr 15fr;gap:8px;margin-top:10px}.rw-gtm-labels div{font-size:10px;color:var(--rw-muted)}.rw-gtm-labels b{display:block;color:var(--rw-navy);font-size:13px;margin-bottom:2px}
+
+    .rw-finance-header{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:end}
+    .rw-keynumbers{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}
+    .rw-key{padding:23px 20px;background:#eef4ee;border-radius:18px}
+    .rw-key:nth-child(2){background:#f8f3ee}.rw-key:nth-child(3){background:#e9edf1}
+    .rw-key .rw-big{font-size:35px;margin-top:6px}
+    .rw-fin-chart{display:grid;grid-template-columns:1fr 1fr;gap:25px;margin-top:32px}
+    .rw-panel{padding:24px;border-top:1px solid var(--rw-navy);background:#fff}
+    .rw-bars{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;align-items:end;height:190px;margin-top:22px;border-bottom:1px solid var(--rw-line)}
+    .rw-bar-col{height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:7px}.rw-bar{width:55%;background:var(--rw-green);min-height:3px}.rw-bar.navy{background:var(--rw-navy)}.rw-bar.negative{background:var(--rw-navy)}
+    .rw-bar-value{font-size:10px;color:var(--rw-navy);text-align:center;white-space:nowrap}.rw-bar-year{font-size:9px;color:var(--rw-muted)}
+    .rw-valuation{margin-top:30px;padding:28px 0;border-top:1px solid var(--rw-line);display:grid;grid-template-columns:1fr auto 1.2fr;gap:20px;align-items:center}
+    .rw-valuation-arrow{font-size:26px;color:var(--rw-green)}
+    .rw-ev{font-size:48px;font-weight:850;letter-spacing:-2px;color:var(--rw-navy)}
+    .rw-round{margin-top:26px;padding:24px;background:#eef4ee;border-radius:20px;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center}
+    .rw-round-value{font-size:44px;font-weight:850;color:var(--rw-navy)}
+    .rw-capital{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:16px}.rw-capital div{padding:14px;border-top:1px solid var(--rw-line)}.rw-capital b{display:block;font-size:11px;color:var(--rw-navy);margin-bottom:4px}.rw-capital span{font-size:10px;color:var(--rw-muted)}
+    .rw-model{margin-top:34px;overflow-x:auto;border-top:1px solid var(--rw-navy)}
+    .rw-model table{width:100%;border-collapse:collapse;min-width:780px}.rw-model th,.rw-model td{padding:13px 10px;border-bottom:1px solid var(--rw-line);text-align:right;font-size:12px;white-space:nowrap}.rw-model th{color:var(--rw-muted);font-weight:700}.rw-model th:first-child,.rw-model td:first-child{text-align:left;color:var(--rw-navy);font-weight:750}.rw-model tr:last-child td{font-weight:850;color:var(--rw-navy)}
+    .rw-footnote{font-size:10px;color:var(--rw-muted);margin-top:13px;line-height:1.7}
+
+    @media(max-width:900px){
+      .nav{height:72px;padding:0 18px}.brand img{width:136px;height:44px}.navlinks{overflow-x:auto;flex:1;gap:18px;justify-content:flex-start;scrollbar-width:none}.navlinks::-webkit-scrollbar{display:none}.navlinks a{font-size:12px}
+      .rw-grid-3,.rw-keynumbers,.rw-fin-chart,.rw-capital{grid-template-columns:1fr}.rw-growth-top,.rw-finance-header{grid-template-columns:1fr;gap:18px}.rw-unit-flow{grid-template-columns:1fr}.rw-flow-arrow{transform:rotate(90deg)}.rw-aov-row{grid-template-columns:repeat(5,minmax(92px,1fr));overflow-x:auto}.rw-metric-grid{grid-template-columns:1fr}.rw-valuation{grid-template-columns:1fr}.rw-valuation-arrow{transform:rotate(90deg);text-align:center}.rw-round{grid-template-columns:1fr}.rw-investor-section{padding:58px 22px}.rw-title{font-size:30px}.rw-big{font-size:40px}
+    }
+    @media(max-width:520px){.nav{padding:0 14px}.brand img{width:128px}.navlinks{gap:16px}.navlinks a{font-size:11px}.rw-grid-3{grid-template-columns:1fr}.rw-growth-number{font-size:45px}.rw-key .rw-big{font-size:30px}.rw-ev{font-size:38px}}
   `;
   d.head.appendChild(style);
+
   const logo=d.querySelector('.brand img');
   if(logo){logo.src='(0) RE_WITH_logo_corrected.png?v=06final5';logo.alt='RE WITH';logo.removeAttribute('width');logo.removeAttribute('height')}
   const heroImage=d.querySelector('.hero-photo img');
@@ -39,17 +111,82 @@ frame.addEventListener('load',()=>{
   const familyImage=d.querySelector('.family-photo img');
   if(familyImage){familyImage.src='海外預約.jpg?v=06final5';familyImage.alt='海外子女與台灣父母'}
 
-  // 06：直接移除這兩個文字節點，不論原本使用 div / h3 / p 等 HTML 標籤。
   const business=d.querySelector('#business');
   if(business){
-    [...business.querySelectorAll('*')].forEach(el=>{
-      const text=el.textContent.trim();
-      if((text==='典型需求場景' || text==='陪診需求存在於不同人生階段與家庭情境。') && el.children.length===0) el.remove();
-    });
+    [...business.querySelectorAll('*')].forEach(el=>{const text=el.textContent.trim();if((text==='典型需求場景'||text==='陪診需求存在於不同人生階段與家庭情境。')&&el.children.length===0)el.remove()});
   }
-
   const brand=d.querySelector('.brand');
-  if(brand){const span=brand.querySelector('span');if(span) span.remove()}
+  if(brand){const span=brand.querySelector('span');if(span)span.remove()}
+
+  const section=(id,html)=>{const el=d.createElement('section');el.id=id;el.className='rw-investor-section';el.innerHTML=html;return el};
+  const old=d.querySelector('#business08');if(old)old.remove();
+  const old2=d.querySelector('#growth09');if(old2)old2.remove();
+  const old3=d.querySelector('#finance10');if(old3)old3.remove();
+
+  const s08=section('business08',`
+    <div class="rw-kicker">08 · 單位經濟</div>
+    <h2 class="rw-title">商業模式</h2>
+    <p class="rw-sub">一筆服務，如何形成收入</p>
+    <div class="rw-grid-3">
+      <div class="rw-tier"><div class="rw-tier-label">LOW · 基礎</div><div class="rw-tier-price">TWD 1,600</div><div class="rw-tier-mix">服務組合 30%</div></div>
+      <div class="rw-tier"><div class="rw-tier-label">MID · 中階</div><div class="rw-tier-price">TWD 2,400</div><div class="rw-tier-mix">服務組合 50%</div></div>
+      <div class="rw-tier"><div class="rw-tier-label">HIGH · 高階</div><div class="rw-tier-price">TWD 3,200</div><div class="rw-tier-mix">服務組合 20%</div></div>
+    </div>
+    <div class="rw-unit-flow">
+      <div class="rw-flow-box"><div class="rw-small">加權平均服務價格</div><div class="rw-flow-main">TWD 2,320</div><div class="rw-small">Weighted Average Price</div></div>
+      <div class="rw-flow-arrow">→</div>
+      <div class="rw-flow-box"><div class="rw-small">平台收入結構</div><div class="rw-flow-main">20% / 80%</div><div class="rw-small">平台收入 / 陪診員分成</div></div>
+    </div>
+    <div class="rw-chart" style="margin-top:25px"><div class="rw-chart-head"><div><div class="rw-small">GMV</div><div class="rw-big">100%</div></div><div class="rw-chart-head" style="gap:25px"><div><div class="rw-small">RE WITH 平台收入</div><div class="rw-big" style="font-size:34px">20%</div></div><div><div class="rw-small">陪診員分成</div><div class="rw-big rw-green" style="font-size:34px">80%</div></div></div></div></div>
+    <div class="rw-aov"><div class="rw-small">服務價格年增 3% · 五年平均客單價格徑</div><div class="rw-aov-row">
+      <div class="rw-aov-item"><span class="rw-year">2027</span><strong>TWD 2,400</strong></div><div class="rw-aov-item"><span class="rw-year">2028</span><strong>TWD 2,472</strong></div><div class="rw-aov-item"><span class="rw-year">2029</span><strong>TWD 2,546</strong></div><div class="rw-aov-item"><span class="rw-year">2030</span><strong>TWD 2,622</strong></div><div class="rw-aov-item"><span class="rw-year">2031</span><strong>TWD 2,701</strong></div>
+    </div></div>
+    <div class="rw-note">平台貢獻毛利＝平台收入 − 金流處理費 − 變動支援成本。陪診員分成不計入平台貢獻毛利。</div>
+  `);
+
+  const s09=section('growth09',`
+    <div class="rw-growth-top">
+      <div><div class="rw-kicker">09 · GROWTH ENGINE</div><h2 class="rw-title">成長模型</h2><p class="rw-sub">從客戶成長到服務事件</p><div class="rw-growth-number">500 → 20,000</div><div class="rw-small">付費客戶 · Paid Customers · 2027 → 2031</div></div>
+      <div class="rw-metric"><div class="rw-metric-title">TIME SERVICE EVENTS</div><div class="rw-metric-main">5,237 → 104,939</div><div class="rw-small">服務事件是 RE WITH 的成長單位</div></div>
+    </div>
+    <div class="rw-chart"><div class="rw-chart-head"><div><div class="rw-small">付費客戶 · Paid Customers</div><div class="rw-big">20,000</div></div><div class="rw-small">2031</div></div>
+      <div class="rw-linechart"><svg viewBox="0 0 1000 220" preserveAspectRatio="none" aria-label="付費客戶五年成長"><line x1="0" y1="190" x2="1000" y2="190" stroke="#e7ddd5"/><line x1="0" y1="95" x2="1000" y2="95" stroke="#e7ddd5" stroke-dasharray="3 8"/><polyline points="30,188 265,170 500,132 735,72 970,15" fill="none" stroke="#183049" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="30" cy="188" r="5" fill="#55715f"/><circle cx="265" cy="170" r="5" fill="#55715f"/><circle cx="500" cy="132" r="5" fill="#55715f"/><circle cx="735" cy="72" r="5" fill="#55715f"/><circle cx="970" cy="15" r="6" fill="#183049"/></svg></div>
+      <div class="rw-chart-labels"><span>500</span><span>2,000</span><span>5,000</span><span>10,000</span><span>20,000</span></div>
+    </div>
+    <div class="rw-metric-grid">
+      <div class="rw-metric"><div class="rw-metric-title">SERVICE FREQUENCY</div><div class="rw-metric-main">2.0 → 3.0</div><div class="rw-small">每位客戶年服務次數</div><div class="rw-mini-row"><div><b>2.0</b>2027</div><div><b>2.2</b>2028</div><div><b>2.5</b>2029</div><div><b>2.8</b>2030</div><div><b>3.0</b>2031</div></div></div>
+      <div class="rw-metric"><div class="rw-metric-title">MARKET PENETRATION</div><div class="rw-metric-main">0.10% → 1.20%</div><div class="rw-small">市場滲透率</div><div class="rw-mini-row"><div><b>0.10%</b>2027</div><div><b>0.25%</b>2028</div><div><b>0.50%</b>2029</div><div><b>0.80%</b>2030</div><div><b>1.20%</b>2031</div></div></div>
+    </div>
+    <div class="rw-chart"><div class="rw-chart-head"><div><div class="rw-small">時間服務事件 · Time Service Events</div><div class="rw-big">104,939</div></div><div class="rw-small">2031</div></div><div class="rw-linechart"><svg viewBox="0 0 1000 220" preserveAspectRatio="none" aria-label="時間服務事件五年成長"><line x1="0" y1="190" x2="1000" y2="190" stroke="#e7ddd5"/><polyline points="30,180 265,160 500,120 735,70 970,12" fill="none" stroke="#55715f" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><path d="M30 180 L265 160 L500 120 L735 70 L970 12 L970 190 L30 190 Z" fill="#eef4ee" opacity=".9"/></svg></div><div class="rw-chart-labels"><span>5,237</span><span>10,478</span><span>26,209</span><span>52,443</span><span>104,939</span></div></div>
+    <div class="rw-gtm"><div class="rw-small">GTM acquisition mix · 2027 blended CAC <strong style="color:#183049">TWD 360</strong></div><div class="rw-gtm-bars"><i></i><i></i><i></i><i></i></div><div class="rw-gtm-labels"><div><b>35%</b>內容／社群／SEO</div><div><b>25%</b>口碑／轉介紹</div><div><b>25%</b>醫療／社區合作</div><div><b>15%</b>企業／海外家庭</div></div></div>
+  `);
+
+  const s10=section('finance10',`
+    <div class="rw-finance-header"><div><div class="rw-kicker">10 · FINANCIAL OUTCOME</div><h2 class="rw-title">財務成果</h2><p class="rw-sub">服務規模轉化為財務成果</p></div><div class="rw-small">2027–2031</div></div>
+    <div class="rw-keynumbers"><div class="rw-key"><div class="rw-small">2031 平台收入</div><div class="rw-big">TWD 54.80M</div></div><div class="rw-key"><div class="rw-small">2031 EBITDA</div><div class="rw-big">TWD 24.01M</div></div><div class="rw-key"><div class="rw-small">2031 EBITDA 利潤率</div><div class="rw-big">43.81%</div></div></div>
+    <div class="rw-fin-chart">
+      <div class="rw-panel"><div class="rw-small">GMV</div><div class="rw-big" style="font-size:34px">TWD 274.01M</div><div class="rw-bars">
+        <div class="rw-bar-col"><span class="rw-bar-value">12.15M</span><i class="rw-bar" style="height:9%"></i><span class="rw-bar-year">2027</span></div><div class="rw-bar-col"><span class="rw-bar-value">25.04M</span><i class="rw-bar" style="height:18%"></i><span class="rw-bar-year">2028</span></div><div class="rw-bar-col"><span class="rw-bar-value">64.51M</span><i class="rw-bar" style="height:32%"></i><span class="rw-bar-year">2029</span></div><div class="rw-bar-col"><span class="rw-bar-value">132.95M</span><i class="rw-bar" style="height:57%"></i><span class="rw-bar-year">2030</span></div><div class="rw-bar-col"><span class="rw-bar-value">274.01M</span><i class="rw-bar navy" style="height:100%"></i><span class="rw-bar-year">2031</span></div>
+      </div></div>
+      <div class="rw-panel"><div class="rw-small">平台收入 · Platform Revenue</div><div class="rw-big" style="font-size:34px">TWD 54.80M</div><div class="rw-bars">
+        <div class="rw-bar-col"><span class="rw-bar-value">2.43M</span><i class="rw-bar navy" style="height:4%"></i><span class="rw-bar-year">2027</span></div><div class="rw-bar-col"><span class="rw-bar-value">5.01M</span><i class="rw-bar navy" style="height:9%"></i><span class="rw-bar-year">2028</span></div><div class="rw-bar-col"><span class="rw-bar-value">12.90M</span><i class="rw-bar navy" style="height:24%"></i><span class="rw-bar-year">2029</span></div><div class="rw-bar-col"><span class="rw-bar-value">26.59M</span><i class="rw-bar navy" style="height:49%"></i><span class="rw-bar-year">2030</span></div><div class="rw-bar-col"><span class="rw-bar-value">54.80M</span><i class="rw-bar navy" style="height:100%"></i><span class="rw-bar-year">2031</span></div>
+      </div></div>
+    </div>
+    <div class="rw-chart"><div class="rw-chart-head"><div><div class="rw-small">EBITDA</div><div class="rw-big">TWD 24.01M</div></div><div class="rw-small">2029 EBITDA 轉正</div></div><div class="rw-bars" style="height:210px">
+      <div class="rw-bar-col"><span class="rw-bar-value">(3.46M)</span><i class="rw-bar negative" style="height:15%"></i><span class="rw-bar-year">2027</span></div><div class="rw-bar-col"><span class="rw-bar-value">(3.02M)</span><i class="rw-bar negative" style="height:13%"></i><span class="rw-bar-year">2028</span></div><div class="rw-bar-col"><span class="rw-bar-value">1.47M</span><i class="rw-bar" style="height:7%"></i><span class="rw-bar-year">2029</span></div><div class="rw-bar-col"><span class="rw-bar-value">9.56M</span><i class="rw-bar" style="height:40%"></i><span class="rw-bar-year">2030</span></div><div class="rw-bar-col"><span class="rw-bar-value">24.01M</span><i class="rw-bar navy" style="height:100%"></i><span class="rw-bar-year">2031</span></div>
+    </div></div>
+    <div class="rw-valuation"><div><div class="rw-small">2031 EBITDA</div><div class="rw-big" style="font-size:38px">TWD 24.01M</div></div><div class="rw-valuation-arrow">× 15× →</div><div><div class="rw-small">模型估值情境 · Illustrative EV</div><div class="rw-ev">TWD 360.17M</div></div></div>
+    <div class="rw-round"><div><div class="rw-small">募資目標 · 25% 股權</div><div class="rw-round-value">TWD 10M</div><div class="rw-small">目前投後估值 TWD 40M</div></div><div class="rw-small" style="max-width:250px">15× 為模型假設，不代表市場保證估值。TWD 360.17M 為 Year-5 illustrative EV。</div></div>
+    <div class="rw-capital"><div><b>GTM</b><span>需求取得與市場擴張</span></div><div><b>產品／平台</b><span>匹配、紀錄與服務標準化</span></div><div><b>團隊</b><span>營運與服務品質</span></div><div><b>營運現金</b><span>支撐規模化成長</span></div></div>
+    <div class="rw-footnote">Revenue → applicable operating costs → EBITDA。陪診員 80% payout 不重複扣入平台貢獻毛利。所有金額為 TWD。</div>
+  `);
+
+  const investment=d.querySelector('#investment');
+  const anchor=investment||d.querySelector('footer')||d.querySelector('.footer');
+  if(anchor){anchor.parentNode.insertBefore(s08,anchor);anchor.parentNode.insertBefore(s09,anchor);anchor.parentNode.insertBefore(s10,anchor)}
+  else{d.querySelector('main')?.append(s08,s09,s10)}
+
+  [...d.querySelectorAll('.navlinks a')].forEach(a=>{if(a.textContent.trim()==='商業模式')a.href='#business08'});
 });
 </script>
 </body>
